@@ -1,6 +1,7 @@
-FROM debian:buster
+FROM alpine
 
-RUN apt-get update
-RUN apt-get install -y filezilla
+RUN apk add --no-cache \
+	filezilla \
+	ttf-dejavu
 
 ENTRYPOINT ["filezilla"]
